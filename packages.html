@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paketlerimiz | Vienna Event</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+
+    <style>
+        .packages-hero {
+            padding: 180px 0 80px;
+            text-align: center;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .price-tag {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            color: var(--color-text-primary);
+            margin: var(--space-md) 0;
+        }
+        .feature-list {
+            list-style: none;
+            margin-bottom: var(--space-xl);
+            flex-grow: 1;
+        }
+        .feature-list li {
+            padding: var(--space-sm) 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            color: var(--color-text-secondary);
+        }
+        .feature-list li::before {
+            content: '❖';
+            color: var(--color-primary);
+            margin-right: 8px;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Vienna Event</a>
+            <button class="hamburger" aria-label="Menü">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+                <li><a href="packages.html" class="nav-link active">Paketler</a></li>
+                <li><a href="contact.html" class="nav-link">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Packages Hero -->
+    <section class="packages-hero">
+        <div class="container animate-on-scroll">
+            <h1 class="stagger-1">Size Özel Paketler</h1>
+            <p class="stagger-2" style="max-width: 600px; margin: var(--space-md) auto 0; color: var(--color-text-secondary);">Her bütçeye ve estetik zevke uygun, ayrıntılarla işlenmiş imza organizasyon paketlerimiz.</p>
+        </div>
+    </section>
+
+    <!-- Packages Grid -->
+    <section class="container animate-on-scroll">
+        <div class="grid grid-3">
+            
+            <!-- Klasik Paket -->
+            <div class="card stagger-1">
+                <h3 class="card-title">Klasik Zarafet</h3>
+                <p>Minimalist ve şık detaylar arayan çiftler için özel konsept.</p>
+                <div class="price-tag">Başlangıç <br> <span>₺50.000</span></div>
+                <ul class="feature-list">
+                    <li>100 Kişilik Mekan Süsleme</li>
+                    <li>Standart Masa Düzeni</li>
+                    <li>Karşılama Panosu</li>
+                    <li>Temel Işıklandırma</li>
+                </ul>
+                <a href="contact.html?paket=klasik" class="btn-ghost" style="text-align: center;">Bu Paketi Seç</a>
+            </div>
+
+            <!-- Premium Paket -->
+            <div class="card stagger-2" style="border-color: var(--color-primary); position: relative; box-shadow: 0 4px 24px rgba(200, 169, 110, 0.1);">
+                <div style="position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: var(--color-primary); color: var(--color-bg); padding: 4px 16px; border-radius: 999px; font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">En Çok Tercih Edilen</div>
+                <h3 class="card-title">Royal İhtişam</h3>
+                <p>Unutulmaz bir gece için ince düşünülmüş lüks detaylar.</p>
+                <div class="price-tag">Başlangıç <br> <span>₺120.000</span></div>
+                <ul class="feature-list">
+                    <li>300 Kişilik Mekan Süsleme</li>
+                    <li>Gold/Silver Özel Tasarım Objeler</li>
+                    <li>Taze Çiçek Aranjmanları</li>
+                    <li>Profesyonel Ses ve Işık</li>
+                    <li>Karşılama Kokteyli</li>
+                </ul>
+                <a href="contact.html?paket=royal" class="btn-primary" style="text-align: center; justify-content: center;">Bu Paketi Seç</a>
+            </div>
+
+            <!-- VIP Paket -->
+            <div class="card stagger-3">
+                <h3 class="card-title">Imperial VIP</h3>
+                <p>Sınırları ortadan kaldıran, tamamen kişiselleştirilmiş bir deneyim.</p>
+                <div class="price-tag">Özel <br> <span>Fiyatlandırma</span></div>
+                <ul class="feature-list">
+                    <li>Sınırsız Kapasite Planlaması</li>
+                    <li>A'dan Z'ye Konsept Tasarımı</li>
+                    <li>Ünlü Sanatçı Temini</li>
+                    <li>İthal Çiçek Aranjmanları</li>
+                    <li>VIP Konuk Yönetimi</li>
+                </ul>
+                <a href="contact.html?paket=vip" class="btn-ghost" style="text-align: center;">İletişime Geçin</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="border-top: 1px solid var(--color-border); padding: var(--space-2xl) 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 1.5rem; margin-bottom: var(--space-md);">Vienna Event</h2>
+            <p style="font-size: 0.9rem; color: var(--color-border);">&copy; 2026 Vienna Event.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

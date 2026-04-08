@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Vienna Event</title>
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Source+Serif+Pro:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Vienna Event</a>
+            <button class="hamburger" aria-label="Menü">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+                <li><a href="packages.html" class="nav-link">Paketler</a></li>
+                <li><a href="contact.html" class="nav-link active">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero-section" style="min-height: 80vh;">
+        <div class="container animate-on-scroll" style="width: 100%;">
+            <div class="grid grid-2">
+                <div class="stagger-1">
+                    <h1>Planlamaya<br>Başlayalım</h1>
+                    <p style="margin: var(--space-lg) 0; color: var(--color-text-secondary); max-width: 400px;">
+                        Hayalinizdeki konsepti detaylandırmak ve paketlerimiz hakkında bilgi almak için formu doldurabilirsiniz.
+                    </p>
+                    
+                    <div style="margin-top: var(--space-2xl);">
+                        <div style="margin-bottom: var(--space-md);">
+                            <span style="display:block; color:var(--color-primary); font-size:14px; text-transform:uppercase; letter-spacing:0.05em;">E-Posta</span>
+                            <a href="mailto:info@viennaevent.com" style="color:var(--color-text-primary); font-size:1.1rem;">info@viennaevent.com</a>
+                        </div>
+                        <div style="margin-bottom: var(--space-md);">
+                            <span style="display:block; color:var(--color-primary); font-size:14px; text-transform:uppercase; letter-spacing:0.05em;">Telefon</span>
+                            <a href="tel:+905550000000" style="color:var(--color-text-primary); font-size:1.1rem;">+90 (555) 000 00 00</a>
+                        </div>
+                        <div style="margin-bottom: var(--space-md);">
+                            <span style="display:block; color:var(--color-primary); font-size:14px; text-transform:uppercase; letter-spacing:0.05em;">Adres</span>
+                            <p style="color:var(--color-text-primary); font-size:1.1rem;">Lüks Plaza İş Merkezi, Kat 12<br>Beşiktaş, İstanbul</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stagger-2">
+                    <form class="card" action="#" method="POST" onsubmit="event.preventDefault(); alert('Form gönderildi! (Tasarım aşaması)');">
+                        <div class="input-group">
+                            <label class="input-label" for="name">Adınız Soyadınız</label>
+                            <input type="text" id="name" class="input" placeholder="Zarif İsminiz..." required>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label" for="email">E-Posta Adresi</label>
+                            <input type="email" id="email" class="input" placeholder="ornek@mail.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label" for="phone">Telefon Numarası</label>
+                            <input type="tel" id="phone" class="input" placeholder="05XX XXX XX XX">
+                        </div>
+                        <div class="input-group">
+                            <label class="input-label" for="message">Mesajınız & Talebiniz</label>
+                            <textarea id="message" class="textarea" placeholder="Hayallerinizdeki organizasyonu bizimle paylaşın..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary" style="justify-content: center; width: 100%; margin-top: var(--space-sm);">Gönderin</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="border-top: 1px solid var(--color-border); padding: var(--space-2xl) 0; text-align: center;">
+        <div class="container">
+            <h2 style="font-size: 1.5rem; margin-bottom: var(--space-md);">Vienna Event</h2>
+            <p style="font-size: 0.9rem; color: var(--color-border);">&copy; 2026 Vienna Event.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
