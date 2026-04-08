@@ -26,19 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (hamburger) {
     hamburger.addEventListener('click', () => {
-      // Very basic toggle, you might want to replace with a drawer or more complex menu
-      const isVisible = navLinks.style.display === 'flex';
-      navLinks.style.display = isVisible ? 'none' : 'flex';
-      
-      if (!isVisible) {
-        navLinks.style.flexDirection = 'column';
-        navLinks.style.position = 'absolute';
-        navLinks.style.top = '100%';
-        navLinks.style.left = '0';
-        navLinks.style.width = '100%';
-        navLinks.style.background = 'rgba(10, 10, 10, 0.95)';
-        navLinks.style.padding = '20px';
-        navLinks.style.borderBottom = '1px solid var(--color-border)';
+      navLinks.classList.toggle('nav-active');
+      // Change hamburger icon
+      if(navLinks.classList.contains('nav-active')) {
+        hamburger.innerHTML = '✕';
+      } else {
+        hamburger.innerHTML = '☰';
       }
     });
   }

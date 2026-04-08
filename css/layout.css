@@ -21,7 +21,7 @@ section {
   position: absolute;
   top: 0; left: 0; width: 100%; height: 100%;
   background:
-    radial-gradient(ellipse at 50% 50%, rgba(200, 169, 110, 0.05) 0%, transparent 60%),
+    radial-gradient(ellipse at 50% 50%, rgba(var(--color-primary-rgb), 0.05) 0%, transparent 60%),
     var(--color-bg);
   z-index: -1;
 }

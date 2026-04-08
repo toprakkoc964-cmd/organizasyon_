@@ -5,9 +5,9 @@
   --color-surface: #141414;
   --color-surface-hover: #1c1c1c;
   
-  --color-primary: #c8a96e; /* Gold */
-  --color-primary-rgb: 200, 169, 110;
-  --color-accent: #e8d5b0; /* Light Gold */
+  --color-primary: #e5b345; /* Bright Shiny Gold */
+  --color-primary-rgb: 229, 179, 69;
+  --color-accent: #f5cf7b; /* Light Shiny Gold */
   
   --color-text-primary: #fdfdfd;
   --color-text-secondary: #a0a0a0;
@@ -15,7 +15,7 @@
 
   /* Typography */
   --font-display: 'Playfair Display', serif;
-  --font-body: 'Source Serif Pro', serif;
+  --font-body: 'Manrope', sans-serif;
 
   /* Spacing (8px grid) */
   --space-xs: 4px;
@@ -35,4 +35,5 @@
 
   /* Easing */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
