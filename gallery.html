@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- ===== SEO: Temel Etiketler ===== -->
+    <title>Galeri | Vienna Event Organizasyon</title>
+    <meta name="description" content="Vienna Event organizasyon galerisine göz atın. Düğün, kına ve nişan etkinliklerimizden profesyonelce hazırlanmış fotoğraflar.">
+    <meta name="keywords" content="düğün galerisi, kına fotoğrafları, organizasyon galerisi, vienna event galeri, etkinlik fotoğrafları">
+    <meta name="author" content="Vienna Event">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://viennaevent.com/gallery.html">
+
+    <!-- ===== Open Graph ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://viennaevent.com/gallery.html">
+    <meta property="og:title" content="Galeri | Vienna Event">
+    <meta property="og:description" content="Vienna Event imzasıyla düzenlenen özel etkinliklerin galeri görüntülerini keşfedin.">
+    <meta property="og:image" content="https://viennaevent.com/og-image.jpg">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Vienna Event">
+
+    <!-- ===== Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Galeri | Vienna Event">
+    <meta name="twitter:description" content="Vienna Event organizasyon fotoğraf galerimize göz atın.">
+    <meta name="twitter:image" content="https://viennaevent.com/og-image.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Vienna Event</a>
+            <button class="hamburger" aria-label="Menü">☰</button>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+                <li><a href="packages.html" class="nav-link">Paketler</a></li>
+                <li><a href="gallery.html" class="nav-link active">Galeri</a></li>
+                <li><a href="contact.html" class="nav-link">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero-section" style="min-height: 50vh; padding: 180px 0 80px; align-items: flex-end;">
+        <div class="hero-bg"></div>
+        <div class="container animate-on-scroll">
+            <h1 class="stagger-1" style="text-align: center;">Etkinlik Galerisi</h1>
+            <p class="stagger-2" style="text-align: center; max-width: 600px; margin: var(--space-md) auto 0;">Vienna Event imzasıyla tasarlanmış unutulmaz anlardan kareler. Bizimle birlikte hayallerini gerçeğe dönüştüren müşterilerimizin ilham verici hikayeleri.</p>
+        </div>
+    </section>
+
+    <!-- Live Gallery Section -->
+    <main style="padding-bottom: 120px;">
+        <section id="galeri" class="animate-on-scroll">
+            <h2 class="sr-only" style="display: none;">Galeri Icerigi</h2>
+            <p id="gallery-status" class="gallery-status"></p>
+            <div class="gallery-grid-wrapper">
+                <div id="gallery-grid" class="gallery-grid" aria-live="polite">
+                    <!-- Skeleton placeholder -->
+                    <div class="marquee-group">
+                        <article class="gallery-item skeleton-gallery"></article>
+                        <article class="gallery-item skeleton-gallery"></article>
+                        <article class="gallery-item skeleton-gallery"></article>
+                        <article class="gallery-item skeleton-gallery"></article>
+                        <article class="gallery-item skeleton-gallery"></article>
+                        <article class="gallery-item skeleton-gallery"></article>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer style="border-top: 1px solid var(--color-border); padding: var(--space-2xl) 0; text-align: center; margin-top: 0;">
+        <div class="container animate-on-scroll">
+            <h2 style="font-size: 1.5rem; margin-bottom: var(--space-md);">Vienna Event</h2>
+            <p style="margin-bottom: var(--space-lg);">Lüksün ve zarafetin buluşma noktası.</p>
+            <p style="font-size: 0.9rem; color: var(--color-border);">&copy; 2026 Vienna Event. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-storage-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/firebase-client.js"></script>
+    <script src="js/gallery.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

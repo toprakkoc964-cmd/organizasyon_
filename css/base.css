@@ -10,6 +10,8 @@ body {
   color: var(--color-text-primary);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 /* Noise overlay */

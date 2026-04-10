@@ -3,14 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vienna Event | Lüks Organizasyon ve Davet</title>
-    <meta name="description" content="Vienna Event ile rüya gibi düğün, nişan ve özel tören organizasyonları. Zarafet ve lüksün buluşma noktası.">
-    
+
+    <!-- ===== SEO: Temel Etiketler ===== -->
+    <title>Vienna Event | İzmir Lüks Düğün, Kına &amp; Davet Organizasyonu</title>
+    <meta name="description" content="İzmir'in en prestijli organizasyon ajansı. Düğün, kına, nişan ve tüm özel davetleriniz için kişiye özel konseptler ve profesyonel yönetim. Royal &amp; Elegance paketlerimizi inceleyin.">
+    <meta name="keywords" content="İzmir düğün organizasyonu, İzmir kına gecesi, İzmir nişan organizasyonu, lüks organizasyon İzmir, vienna event İzmir, özel davet organizasyonuİ">
+    <meta name="author" content="Vienna Event">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://viennaevent.com/index.html">
+
+    <!-- ===== Open Graph (Facebook / WhatsApp) ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://viennaevent.com/index.html">
+    <meta property="og:title" content="Vienna Event | İzmir Lüks Düğün, Kına &amp; Davet Organizasyonu">
+    <meta property="og:description" content="İzmir'in en prestijli organizasyon ajansı. Kişiye özel konsept, lüks dekor ve profesyonel hizmet.">
+    <meta property="og:image" content="https://viennaevent.com/og-image.jpg">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Vienna Event">
+
+    <!-- ===== Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Vienna Event | Lüks Düğün ve Organizasyon">
+    <meta name="twitter:description" content="Hayalinizdeki organizasyonu Vienna Event ile yaşayın.">
+    <meta name="twitter:image" content="https://viennaevent.com/og-image.jpg">
+
+    <!-- ===== Schema.org JSON-LD ===== -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Organization", "LocalBusiness", "EventVenue"],
+      "name": "Vienna Event",
+      "url": "https://viennaevent.com",
+      "description": "İzmir Lüks Düğün, Kına ve Kurumsal Davet Organizasyonu",
+      "priceRange": "$$$",
+      "areaServed": "Izmir and surrounding areas",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "İzmir",
+        "addressRegion": "İzmir",
+        "addressCountry": "TR"
+      },
+      "serviceType": ["Düğün Organizasyonu", "Kına Organizasyonu", "Nişan Organizasyonu", "Kurumsal Davet"]
+    }
+    </script>
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/variables.css">
     <link rel="stylesheet" href="css/base.css">
@@ -29,6 +70,7 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link active">Anasayfa</a></li>
                 <li><a href="packages.html" class="nav-link">Paketler</a></li>
+                <li><a href="gallery.html" class="nav-link">Galeri</a></li>
                 <li><a href="contact.html" class="nav-link">İletişim</a></li>
             </ul>
         </div>
@@ -36,8 +78,21 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="hero-bg"></div>
-        <div class="container animate-on-scroll">
+        <!-- Video Arka Plan -->
+        <video
+            class="hero-video"
+            src="videos/hero.mp4.mp4"
+            autoplay
+            loop
+            muted
+            playsinline
+            poster=""
+            aria-hidden="true">
+        </video>
+        <!-- Karartma Katmanı -->
+        <div class="hero-overlay"></div>
+        <!-- İçerik -->
+        <div class="container animate-on-scroll" style="position: relative; z-index: 2;">
             <h1 class="stagger-1">Rüya Gibi Bir Başlangıç</h1>
             <p class="stagger-2" style="max-width: 600px; margin: var(--space-md) 0 var(--space-xl);">Hayatınızın en özel gününü eşsiz bir zariflikle unutulmaz kılıyoruz. Düğün, nişan ve özel davetlerinizde lüksün ve estetiğin kusursuz uyumu.</p>
             <a href="packages.html" class="btn-primary stagger-3">Paketleri İnceleyin</a>
@@ -117,15 +172,7 @@
         </div>
     </section>
 
-    <!-- Live Gallery Section -->
-    <section id="galeri" class="container animate-on-scroll">
-        <div class="gallery-headline">
-            <h2>Etkinlik Galerisi</h2>
-            <p>Yuklenen gorseller otomatik olarak burada yayinlanir.</p>
-        </div>
-        <p id="gallery-status" class="gallery-status">Galeri yukleniyor...</p>
-        <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
-    </section>
+
 
     <!-- Footer -->
     <footer style="border-top: 1px solid var(--color-border); padding: var(--space-2xl) 0; text-align: center; margin-top: 0;">
@@ -133,7 +180,6 @@
             <h2 style="font-size: 1.5rem; margin-bottom: var(--space-md);">Vienna Event</h2>
             <p style="margin-bottom: var(--space-lg);">Lüksün ve zarafetin buluşma noktası.</p>
             <p style="font-size: 0.9rem; color: var(--color-border);">&copy; 2026 Vienna Event. Tüm Hakları Saklıdır.</p>
-            <p style="margin-top: 12px; font-size: 0.85rem;"><a href="admin.html">Galeri yonetimi</a></p>
         </div>
     </footer>
 
@@ -143,7 +189,7 @@
     <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-storage-compat.js"></script>
     <script src="js/firebase-config.js"></script>
     <script src="js/firebase-client.js"></script>
-    <script src="js/gallery.js"></script>
+
     <script src="js/main.js"></script>
 </body>
 </html>

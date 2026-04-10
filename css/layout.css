@@ -15,15 +15,38 @@ section {
   align-items: center;
   position: relative;
   overflow: hidden;
+  margin: 0;
+  border: none;
+  /* Arka plan rengi body ile birebir aynı — sub-pixel sızmayı gizler */
+  background-color: #0a0a0a;
 }
 
-.hero-bg {
+/* Video arka plan */
+.hero-video {
   position: absolute;
-  top: 0; left: 0; width: 100%; height: 100%;
-  background:
-    radial-gradient(ellipse at 50% 50%, rgba(var(--color-primary-rgb), 0.05) 0%, transparent 60%),
-    var(--color-bg);
-  z-index: -1;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+  pointer-events: none;
+  /* Inline baseline gap kesin çözümü */
+  display: block;
+  vertical-align: bottom;
+}
+
+/* Lüks karartma katmanı */
+.hero-overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: linear-gradient(
+    to top,
+    #0a0a0a 0%,                   /* Alt kenar: body rengiyle birebir aynı opak siyah */
+    rgba(0, 0, 0, 0.60) 50%,
+    rgba(0, 0, 0, 0.35) 100%
+  );
+  z-index: 1;
 }
 
 .grid {

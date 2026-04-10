@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vienna Event | Galeri Yonetim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Vienna Event</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link">Anasayfa</a></li>
+                <li><a href="packages.html" class="nav-link">Paketler</a></li>
+                <li><a href="gallery.html" class="nav-link">Galeri</a></li>
+                <li><a href="contact.html" class="nav-link">İletişim</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container admin-page">
+        <header class="admin-headline">
+            <h1>Galeri Yonetim Paneli</h1>
+            <p>Musteriniz buradan gorsel ekleyip silebilir. Degisiklikler aninda ana sayfaya yansir.</p>
+        </header>
+
+        <section id="admin-login-box" class="admin-panel-card">
+            <h2>Admin Girisi</h2>
+            <form id="admin-login-form" class="admin-form">
+                <label class="input-label" for="admin-email">E-posta</label>
+                <input class="input" id="admin-email" type="email" required>
+
+                <label class="input-label" for="admin-password">Sifre</label>
+                <input class="input" id="admin-password" type="password" required>
+
+                <button type="submit" class="btn-primary">Giris Yap</button>
+            </form>
+        </section>
+
+        <section id="admin-app-box" class="admin-panel-card" hidden>
+            <div class="admin-toolbar" style="margin-bottom: 30px;">
+                <div class="admin-tabs" style="display: flex; gap: 10px; flex-wrap: wrap;">
+                    <button id="tab-gallery" type="button" class="btn-primary" style="padding: 8px 16px;">Galeri Yonetimi</button>
+                    <button id="tab-packages" type="button" class="btn-ghost" style="padding: 8px 16px;">Paket Yonetimi</button>
+                </div>
+                <button id="admin-logout" type="button" class="btn-ghost">Cikis Yap</button>
+            </div>
+
+            <!-- GALERI BOLUMU -->
+            <div id="section-gallery">
+                <form id="admin-upload-form" class="admin-form">
+                    <label class="input-label" for="admin-caption">Gorsel basligi</label>
+                    <input class="input" id="admin-caption" type="text" placeholder="Ornek: Dugun gecesi" maxlength="60">
+
+                    <label class="input-label" for="admin-file">Gorsel dosyasi</label>
+                    <input class="input" id="admin-file" type="file" accept="image/*" required>
+
+                    <button id="admin-upload-button" type="submit" class="btn-primary">Gorseli Yayinla</button>
+                </form>
+
+                <hr class="admin-separator">
+                <h3>Yayindaki Gorseller</h3>
+                <div id="admin-gallery-list" class="admin-gallery-list"></div>
+            </div>
+
+            <!-- PAKETLER BOLUMU -->
+            <div id="section-packages" hidden>
+                <div id="package-switcher" style="display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 24px;">
+                    <button type="button" class="btn-primary package-btn active" data-pkg="essence" style="padding: 6px 14px;">Essence (Baslangic)</button>
+                    <button type="button" class="btn-ghost package-btn" data-pkg="elegance" style="padding: 6px 14px;">Elegance (Orta)</button>
+                    <button type="button" class="btn-ghost package-btn" data-pkg="royal" style="padding: 6px 14px;">Royal (VIP)</button>
+                </div>
+                
+                <form id="admin-package-form" class="admin-form">
+                    <label class="input-label" for="pkg-title">Paket Basligi (Orn: Klasik Zarafet)</label>
+                    <input class="input" id="pkg-title" type="text" required>
+
+                    <label class="input-label" for="pkg-subtitle">Alt Baslik / Aciklama (Orn: Minimalist ve sik...)</label>
+                    <input class="input" id="pkg-subtitle" type="text" required>
+
+                    <div style="display: flex; gap: 15px;">
+                        <div style="flex: 1;">
+                            <label class="input-label" for="pkg-price-label">Fiyat Ust Etiketi (Orn: Baslangic VEYA Ozel)</label>
+                            <input class="input" id="pkg-price-label" type="text" required>
+                        </div>
+                        <div style="flex: 1;">
+                            <label class="input-label" for="pkg-price-value">Fiyat Degeri (Orn: ₺50.000 VEYA Fiyatlandirma)</label>
+                            <input class="input" id="pkg-price-value" type="text" required>
+                        </div>
+                    </div>
+
+                    <label class="input-label">Ozellikler (Maddeler)</label>
+                    <div id="pkg-features-list" style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 12px;">
+                        <!-- JS tarafindan doldurulacak -->
+                    </div>
+
+                    <div style="display: flex; gap: 10px; margin-bottom: 24px;">
+                        <input class="input" id="pkg-new-feature" type="text" placeholder="Yeni bir madde ekleyin..." style="flex: 1; margin: 0;">
+                        <button id="btn-add-feature" type="button" class="btn-ghost" style="flex-shrink: 0;">Listeye Ekle</button>
+                    </div>
+
+                    <button id="btn-save-package" type="submit" class="btn-primary">Paketi Kaydet & Guncelle</button>
+                </form>
+            </div>
+        </section>
+
+        <p id="admin-status" class="admin-status">Panel hazirlaniyor...</p>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-storage-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/firebase-client.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>

@@ -3,7 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paketlerimiz | Vienna Event</title>
+
+    <!-- ===== SEO: Temel Etiketler ===== -->
+    <title>İzmir Organizasyon Paketleri | Vienna Event</title>
+    <meta name="description" content="Vienna Event Essence, Elegance ve Royal organizasyon paketleri. İzmir düğün, kına ve nişan etkinlikleriniz için kişiye özel lüks konseptler ve tam koordinasyon hizmeti.">
+    <meta name="keywords" content="İzmir düğün paketi fiyatları, kına paketi İzmir, organizasyon paketleri, royal paket, elegance paket, essence paket İzmir">
+    <meta name="author" content="Vienna Event">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://viennaevent.com/packages.html">
+
+    <!-- ===== Open Graph ===== -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://viennaevent.com/packages.html">
+    <meta property="og:title" content="Paketler ve Fiyatlar | Vienna Event">
+    <meta property="og:description" content="Kişiye özel lüks organizasyon paketlerimizi keşfedin. Essence, Elegance ve Royal seçenekleriyle hayalinizdeki geceyi yaşayın.">
+    <meta property="og:image" content="https://viennaevent.com/og-image.jpg">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Vienna Event">
+
+    <!-- ===== Twitter Card ===== -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Paketler | Vienna Event">
+    <meta name="twitter:description" content="Essence, Elegance ve Royal paketleri ile lüks organizasyon deneyimi.">
+    <meta name="twitter:image" content="https://viennaevent.com/og-image.jpg">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,10 +33,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
     
     <!-- CSS -->
-    <link rel="stylesheet" href="css/variables.css">
-    <link rel="stylesheet" href="css/base.css">
-    <link rel="stylesheet" href="css/layout.css">
-    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/variables.css?v=2">
+    <link rel="stylesheet" href="css/base.css?v=2">
+    <link rel="stylesheet" href="css/layout.css?v=2">
+    <link rel="stylesheet" href="css/components.css?v=2">
     <link rel="stylesheet" href="css/animations.css">
 
     <style>
@@ -29,22 +51,6 @@
             color: var(--color-text-primary);
             margin: var(--space-md) 0;
         }
-        .feature-list {
-            list-style: none;
-            margin-bottom: var(--space-xl);
-            flex-grow: 1;
-        }
-        .feature-list li {
-            padding: var(--space-sm) 0;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            color: var(--color-text-secondary);
-        }
-        .feature-list li::before {
-            content: '❖';
-            color: var(--color-primary);
-            margin-right: 8px;
-            font-size: 0.8rem;
-        }
     </style>
 </head>
 <body>
@@ -58,6 +64,7 @@
             <ul class="nav-links">
                 <li><a href="index.html" class="nav-link">Anasayfa</a></li>
                 <li><a href="packages.html" class="nav-link active">Paketler</a></li>
+                <li><a href="gallery.html" class="nav-link">Galeri</a></li>
                 <li><a href="contact.html" class="nav-link">İletişim</a></li>
             </ul>
         </div>
@@ -75,49 +82,38 @@
     <section class="container animate-on-scroll">
         <div class="grid grid-3">
             
-            <!-- Klasik Paket -->
-            <div class="card stagger-1">
-                <h3 class="card-title">Klasik Zarafet</h3>
-                <p>Minimalist ve şık detaylar arayan çiftler için özel konsept.</p>
-                <div class="price-tag">Başlangıç <br> <span>₺50.000</span></div>
-                <ul class="feature-list">
-                    <li>100 Kişilik Mekan Süsleme</li>
-                    <li>Standart Masa Düzeni</li>
-                    <li>Karşılama Panosu</li>
-                    <li>Temel Işıklandırma</li>
-                </ul>
-                <a href="contact.html?paket=klasik" class="btn-ghost" style="text-align: center;">Bu Paketi Seç</a>
+            <!-- Klasik Paket (Essence) -->
+            <div id="package-essence" class="card stagger-1">
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-line"></div>
+                <div class="skeleton skeleton-line"></div>
+                <div class="skeleton skeleton-line" style="width:70%"></div>
+                <div class="skeleton skeleton-btn"></div>
             </div>
 
-            <!-- Premium Paket -->
-            <div class="card stagger-2" style="border-color: var(--color-primary); position: relative; box-shadow: 0 4px 24px rgba(var(--color-primary-rgb), 0.1);">
+            <!-- Premium Paket (Elegance) -->
+            <div id="package-elegance" class="card stagger-2" style="border-color: var(--color-primary); position: relative; box-shadow: 0 4px 24px rgba(var(--color-primary-rgb), 0.1);">
                 <div style="position: absolute; top: 0; left: 50%; transform: translate(-50%, -50%); background: var(--color-primary); color: var(--color-bg); padding: 4px 16px; border-radius: 999px; font-weight: bold; font-size: 0.8rem; text-transform: uppercase;">En Çok Tercih Edilen</div>
-                <h3 class="card-title">Royal İhtişam</h3>
-                <p>Unutulmaz bir gece için ince düşünülmüş lüks detaylar.</p>
-                <div class="price-tag">Başlangıç <br> <span>₺120.000</span></div>
-                <ul class="feature-list">
-                    <li>300 Kişilik Mekan Süsleme</li>
-                    <li>Gold/Silver Özel Tasarım Objeler</li>
-                    <li>Taze Çiçek Aranjmanları</li>
-                    <li>Profesyonel Ses ve Işık</li>
-                    <li>Karşılama Kokteyli</li>
-                </ul>
-                <a href="contact.html?paket=royal" class="btn-primary" style="text-align: center; justify-content: center;">Bu Paketi Seç</a>
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-line"></div>
+                <div class="skeleton skeleton-line"></div>
+                <div class="skeleton skeleton-line" style="width:70%"></div>
+                <div class="skeleton skeleton-btn"></div>
             </div>
 
-            <!-- VIP Paket -->
-            <div class="card stagger-3">
-                <h3 class="card-title">Imperial VIP</h3>
-                <p>Sınırları ortadan kaldıran, tamamen kişiselleştirilmiş bir deneyim.</p>
-                <div class="price-tag">Özel <br> <span>Fiyatlandırma</span></div>
-                <ul class="feature-list">
-                    <li>Sınırsız Kapasite Planlaması</li>
-                    <li>A'dan Z'ye Konsept Tasarımı</li>
-                    <li>Ünlü Sanatçı Temini</li>
-                    <li>İthal Çiçek Aranjmanları</li>
-                    <li>VIP Konuk Yönetimi</li>
-                </ul>
-                <a href="contact.html?paket=vip" class="btn-ghost" style="text-align: center;">İletişime Geçin</a>
+            <!-- VIP Paket (Royal) -->
+            <div id="package-royal" class="card stagger-3">
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-text"></div>
+                <div class="skeleton skeleton-price"></div>
+                <div class="skeleton skeleton-line"></div>
+                <div class="skeleton skeleton-line"></div>
+                <div class="skeleton skeleton-line" style="width:70%"></div>
+                <div class="skeleton skeleton-btn"></div>
             </div>
 
         </div>
@@ -131,6 +127,30 @@
         </div>
     </footer>
 
+    <!-- Package Details Modal -->
+    <div id="pkg-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-content">
+            <button id="pkg-modal-close" class="modal-close">&times;</button>
+            <h2 id="modal-pkg-title" class="modal-title">Paket İçeriği</h2>
+            <div id="modal-pkg-features" class="modal-body">
+                <!-- İçerik JS tarafından doldurulacak -->
+            </div>
+            <div class="modal-footer">
+                <a id="modal-pkg-contact" href="contact.html" class="btn-primary" style="width: 100%; justify-content: center;">İletişime Geç</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Firebase Core and Firestore -->
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-storage-compat.js"></script>
+    
+    <!-- Config and App Logic -->
+    <script src="js/firebase-config.js"></script>
+    <script src="js/firebase-client.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/packages-live.js"></script>
 </body>
 </html>
