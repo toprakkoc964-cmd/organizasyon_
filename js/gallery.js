@@ -51,7 +51,10 @@
                 }
             },
             function onError() {
-                if (!cached) statusEl.textContent = "Galeri yüklenirken bir hata oluştu.";
+                if (!cached) {
+                    gridEl.innerHTML = "";
+                    statusEl.textContent = "";
+                }
             }
         );
 

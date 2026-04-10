@@ -40,21 +40,69 @@
   var serverTimestamp = window.viennaFirebase.serverTimestamp;
   var unsubscribe = null;
 
+  // ===== AUTO-LOGOUT: 5 dakika inaktif kalınca otomatik çıkış =====
+  var AUTO_LOGOUT_MS = 5 * 60 * 1000; // 5 dakika
+  var autoLogoutTimer = null;
+  var countdownInterval = null;
+
+  function resetAutoLogout() {
+    clearTimeout(autoLogoutTimer);
+    clearInterval(countdownInterval);
+
+    // Countdown mesajını sil
+    if (statusEl && statusEl.dataset.countdown) {
+      statusEl.textContent = "Giriş yapıldı: " + (auth.currentUser ? auth.currentUser.email : "");
+      delete statusEl.dataset.countdown;
+    }
+
+    // Kullanıcı giriş yapmışsa zamanlayıcıyı başlat
+    if (auth.currentUser) {
+      autoLogoutTimer = setTimeout(function () {
+        auth.signOut().then(function () {
+          alert("Güvenlik nedeniyle 5 dakika işlem yapılmadığı için oturumunuz kapatıldı.");
+        });
+      }, AUTO_LOGOUT_MS);
+
+      // Son 30 saniyede uyarı göster
+      countdownInterval = setTimeout(function () {
+        if (statusEl) {
+          statusEl.textContent = "⚠ 30 saniye içinde oturum kapanacak...";
+          statusEl.dataset.countdown = "true";
+          statusEl.style.color = "#ff8f8f";
+        }
+      }, AUTO_LOGOUT_MS - 30000);
+    }
+  }
+
+  function stopAutoLogout() {
+    clearTimeout(autoLogoutTimer);
+    clearInterval(countdownInterval);
+  }
+
+  // Kullanıcı aktivitelerini dinle
+  ["mousemove", "keydown", "click", "scroll", "touchstart"].forEach(function (evt) {
+    document.addEventListener(evt, resetAutoLogout, { passive: true });
+  });
+
   auth.onAuthStateChanged(function onAuthStateChanged(user) {
     if (!user) {
+      stopAutoLogout();
       if (unsubscribe) {
         unsubscribe();
         unsubscribe = null;
       }
       loginBox.hidden = false;
       appBox.hidden = true;
-      statusEl.textContent = "Yonetim paneli icin giris yapin.";
+      statusEl.textContent = "Yönetim paneli için giriş yapın.";
+      statusEl.style.color = "";
       return;
     }
 
     loginBox.hidden = true;
     appBox.hidden = false;
-    statusEl.textContent = "Giris yapildi: " + user.email;
+    statusEl.textContent = "Giriş yapıldı: " + user.email;
+    statusEl.style.color = "";
+    resetAutoLogout();
     startListeningGallery();
     
     // Load default package for the package tab

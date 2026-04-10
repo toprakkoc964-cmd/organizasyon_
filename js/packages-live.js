@@ -129,7 +129,7 @@
         listHtml += '</ul>';
         modalBodyEl.innerHTML = listHtml;
 
-        if (modalContactBtn) modalContactBtn.href = "contact.html?paket=" + pkgId;
+        if (modalContactBtn) modalContactBtn.href = "contact?paket=" + pkgId;
 
         modalEl.style.display = "flex";
         document.body.style.overflow = "hidden";

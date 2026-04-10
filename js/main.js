@@ -35,4 +35,12 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Safari/iOS fixes for video freezing when changing tabs
+  document.addEventListener("visibilitychange", () => {
+    const video = document.querySelector('.hero-video');
+    if (video && document.visibilityState === 'visible') {
+      video.play().catch(e => console.log('Video autoplay resumed'));
+    }
+  });
 });
