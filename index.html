@@ -117,15 +117,33 @@
         </div>
     </section>
 
+    <!-- Live Gallery Section -->
+    <section id="galeri" class="container animate-on-scroll">
+        <div class="gallery-headline">
+            <h2>Etkinlik Galerisi</h2>
+            <p>Yuklenen gorseller otomatik olarak burada yayinlanir.</p>
+        </div>
+        <p id="gallery-status" class="gallery-status">Galeri yukleniyor...</p>
+        <div id="gallery-grid" class="gallery-grid" aria-live="polite"></div>
+    </section>
+
     <!-- Footer -->
     <footer style="border-top: 1px solid var(--color-border); padding: var(--space-2xl) 0; text-align: center; margin-top: 0;">
         <div class="container animate-on-scroll">
             <h2 style="font-size: 1.5rem; margin-bottom: var(--space-md);">Vienna Event</h2>
             <p style="margin-bottom: var(--space-lg);">Lüksün ve zarafetin buluşma noktası.</p>
             <p style="font-size: 0.9rem; color: var(--color-border);">&copy; 2026 Vienna Event. Tüm Hakları Saklıdır.</p>
+            <p style="margin-top: 12px; font-size: 0.85rem;"><a href="admin.html">Galeri yonetimi</a></p>
         </div>
     </footer>
 
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-storage-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/firebase-client.js"></script>
+    <script src="js/gallery.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>

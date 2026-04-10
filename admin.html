@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vienna Event | Galeri Yonetim</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Manrope:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+    <div class="grain-overlay"></div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">Vienna Event</a>
+            <ul class="nav-links" style="display: flex;">
+                <li><a href="index.html" class="nav-link">Siteye Don</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container admin-page">
+        <header class="admin-headline">
+            <h1>Galeri Yonetim Paneli</h1>
+            <p>Musteriniz buradan gorsel ekleyip silebilir. Degisiklikler aninda ana sayfaya yansir.</p>
+        </header>
+
+        <section id="admin-login-box" class="admin-panel-card">
+            <h2>Admin Girisi</h2>
+            <form id="admin-login-form" class="admin-form">
+                <label class="input-label" for="admin-email">E-posta</label>
+                <input class="input" id="admin-email" type="email" required>
+
+                <label class="input-label" for="admin-password">Sifre</label>
+                <input class="input" id="admin-password" type="password" required>
+
+                <button type="submit" class="btn-primary">Giris Yap</button>
+            </form>
+        </section>
+
+        <section id="admin-app-box" class="admin-panel-card" hidden>
+            <div class="admin-toolbar">
+                <h2>Galeri Icerik Yonetimi</h2>
+                <button id="admin-logout" type="button" class="btn-ghost">Cikis Yap</button>
+            </div>
+
+            <form id="admin-upload-form" class="admin-form">
+                <label class="input-label" for="admin-caption">Gorsel basligi</label>
+                <input class="input" id="admin-caption" type="text" placeholder="Ornek: Dugun gecesi" maxlength="120">
+
+                <label class="input-label" for="admin-file">Gorsel dosyasi</label>
+                <input class="input" id="admin-file" type="file" accept="image/*" required>
+
+                <button id="admin-upload-button" type="submit" class="btn-primary">Gorseli Yayinla</button>
+            </form>
+
+            <hr class="admin-separator">
+            <h3>Yayindaki Gorseller</h3>
+            <div id="admin-gallery-list" class="admin-gallery-list"></div>
+        </section>
+
+        <p id="admin-status" class="admin-status">Panel hazirlaniyor...</p>
+    </main>
+
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/12.1.0/firebase-storage-compat.js"></script>
+    <script src="js/firebase-config.js"></script>
+    <script src="js/firebase-client.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
